@@ -1,0 +1,71 @@
+package com.hdfc.olms.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import com.hdfc.olms.entity.Employee;
+import com.hdfc.olms.entity.LeaveRequest;
+import com.hdfc.olms.vo.LeaveRequestVO;
+
+import reactor.core.publisher.Mono;
+
+@Service
+public class LeaveRequestServiceImpl implements ILeaveRequestService{
+		
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@Autowired
+	IEmployeeService employeeService;
+	public Employee getEmployee() {
+		return employeeService.getCurrentUser();
+	}
+	
+	String baseUrl = "http://localhost:7000/api/admin/leave-request";
+
+	@Override
+	public Mono<LeaveRequestVO> applyForLeave(LeaveRequest leaveRequest) {
+		WebClient client = WebClient.create(baseUrl);
+		return client.post().uri("/apply-leave").body(Mono.just(leaveRequest), LeaveRequest.class).retrieve().bodyToMono(LeaveRequestVO.class);
+		/*
+		 * leaveRequest.setEmployee(getEmployee()); LeaveRequestVO leaveRequestVO =
+		 * restTemplate.postForObject(baseUrl+"/apply-leave", leaveRequest,
+		 * LeaveRequestVO.class); return leaveRequestVO;
+		 */
+	}
+
+	@Override
+	public LeaveRequestVO modifyLeave(LeaveRequest leaveRequest) {
+		leaveRequest.setEmployee(getEmployee());
+		LeaveRequestVO leaveRequestVO = restTemplate.postForObject(baseUrl + "/apply-leave", leaveRequest, LeaveRequestVO.class);
+		return leaveRequestVO;
+	}
+
+	@Override
+	public LeaveRequestVO getLeaveRequestStatus(long leaveRequestId) {
+		LeaveRequestVO leaveRequestVO = restTemplate.getForObject(baseUrl + "/get/leave-status/" + leaveRequestId, LeaveRequestVO.class);
+		return leaveRequestVO;
+	}
+
+	@Override
+	public List<LeaveRequestVO> getCurrentUserPendingLeaves() {
+	List<LeaveRequestVO> leaveRequests = restTemplate.getForObject(baseUrl + "/get/pending-leaves/" +getEmployee().getEmployeeId(), List.class);
+		return leaveRequests;
+	}
+
+	@Override
+	public List<LeaveRequestVO> getCurrentUserLeaveHistory() {
+		List<LeaveRequestVO> leaveRequests = restTemplate.getForObject(baseUrl + "/get/leave-history/by-id/"+getEmployee().getEmployeeId(), List.class);
+		return leaveRequests;
+	}
+	
+}

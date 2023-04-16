@@ -1,0 +1,29 @@
+package com.hdfc.olms.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hdfc.olms.entity.Employee;
+import com.hdfc.olms.entity.LeaveBalance;
+
+@Service
+public class LeaveBalanceServiceImpl implements ILeaveBalanceService{
+
+	
+	@Autowired
+	IEmployeeService employeeService;
+	public Employee getEmployee() {
+		return employeeService.getCurrentUser();
+	}
+	
+	@Override
+	public List<LeaveBalance> getLeaveBalance() {
+		
+		return null;
+	}
+	
+	
+
+}

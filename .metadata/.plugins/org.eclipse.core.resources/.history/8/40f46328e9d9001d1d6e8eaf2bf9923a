@@ -1,0 +1,24 @@
+package com.hdfc.olms.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeServiceImpl {
+	
+//	Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	String currentPrincipalName = authentication.getName();
+	
+	
+//	if(authentication != null && authentication.isAuthenticated()) {
+//	    String currentUserName = authentication.getName();
+//	    //Object principal = authentication.getPrincipal();
+//	    // additional details can be extracted from the principal object 
+//	}
+
+}

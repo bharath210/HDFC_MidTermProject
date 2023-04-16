@@ -1,0 +1,14 @@
+package com.hdfc.olms.controller;
+
+import java.util.List;
+
+import com.hdfc.olms.entity.LeaveRequest;
+import com.hdfc.olms.vo.LeaveRequestVO;
+
+public interface ILeaveRequestService {
+	public LeaveRequestVO applyForLeave(LeaveRequest leaveRequest);
+	public LeaveRequestVO modifyLeave(LeaveRequest leaveRequest);
+	public LeaveRequestVO getLeaveRequestStatus(long leaveRequestId);
+	public List<LeaveRequestVO> getCurrentUserPendingLeaves();
+	public List<LeaveRequestVO> getCurrentUserLeaveHistory();
+}

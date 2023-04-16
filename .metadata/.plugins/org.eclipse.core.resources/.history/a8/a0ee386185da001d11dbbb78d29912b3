@@ -1,0 +1,49 @@
+package com.hdfc.olms.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.hdfc.olms.exception.EmployeeNotFoundException;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+	
+	@ExceptionHandler(EmployeeNotFoundException.class)
+	public ResponseEntity<String> employeeNotFoundExceptionHandler(){
+		return new ResponseEntity<>("Could not find employee", HttpStatus.BAD_REQUEST);
+	}
+	
+//	@ExceptionHandler(ConstraintViolationException.class)
+//	public ResponseEntity<List<String>> getErrors(ConstraintViolationException ex){
+//		List<String> errors = new ArrayList<>();
+//		Set<ConstraintViolation<?>> violations = ex.getConstraintViolations();
+//		for(ConstraintViolation<?> violation : violations) {
+//			errors.add(violation.getMessage()+" "+violation.getRootBean());
+//		}
+//		
+//		return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+//	}
+	
+//	@ExceptionHandler(ConstraintViolationException.class)
+//	 public ResponseEntity<Map<String, List<String>>> handleValidationErrors(ConstraintViolationException ex) {
+//        List<String> errors = ex.getBindingResult().getFieldErrors()
+//                .stream().map(FieldError::getDefaultMessage).collect(Collectors.toList());
+//        return new ResponseEntity<>(getErrorsMap(errors), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+//    }
+
+//    private Map<String, List<String>> getErrorsMap(List<String> errors) {
+//        Map<String, List<String>> errorResponse = new HashMap<>();
+//        errorResponse.put("errors", errors);
+//        return errorResponse;
+//    }
+
+}

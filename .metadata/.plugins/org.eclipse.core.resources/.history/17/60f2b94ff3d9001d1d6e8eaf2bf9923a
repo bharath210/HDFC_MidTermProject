@@ -1,0 +1,14 @@
+package com.hdfc.olms.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class LeaveRequestServiceImpl {
+		
+	@Autowired
+	RestTemplate restTemplate;
+	
+	String baseUrl = "http://localhost:7000/api/admin/employees";
+}

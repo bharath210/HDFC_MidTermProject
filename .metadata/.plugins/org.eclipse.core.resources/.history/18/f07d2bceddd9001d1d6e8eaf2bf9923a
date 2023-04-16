@@ -1,0 +1,11 @@
+package com.hdfc.olms.entity;
+
+public class Employee {
+	
+	private long employeeId;
+	private String name;
+	private String email;
+	private String phoneNumber;
+	private String department;
+
+}

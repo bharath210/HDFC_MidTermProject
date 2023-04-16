@@ -1,0 +1,13 @@
+package com.hdfc.olms;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class OfficeLeaveManagementSystemEmployeeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OfficeLeaveManagementSystemEmployeeApplication.class, args);
+	}
+
+}

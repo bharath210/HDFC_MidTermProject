@@ -1,0 +1,44 @@
+package com.hdfc.olms.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+@SpringBootTest
+class LeaveBalanceServiceImplTest {
+	
+	@Autowired
+	ILeaveBalanceService leaveBalanceService;
+
+	@Test
+	void testAddLeaveBalance() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testUpdateBalance() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveBalanceById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetEmployeeLeaveBalances() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveBalanceByEmployeeAndLeaveType() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAllLeaveBalances() {
+		fail("Not yet implemented");
+	}
+
+}

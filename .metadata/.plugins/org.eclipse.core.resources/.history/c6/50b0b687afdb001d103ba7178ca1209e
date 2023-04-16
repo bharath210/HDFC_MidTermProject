@@ -1,0 +1,49 @@
+package com.hdfc.olms.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hdfc.olms.entity.Employee;
+import com.hdfc.olms.exception.EmployeeNotFoundException;
+
+@SpringBootTest
+class EmployeeServiceImplTest {
+	
+	@Autowired
+	IEmployeeService employeeService;
+
+//	@Test
+//	void testAddEmployee() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testUpdateEmployee() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testGetEmployeeById() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testGetAllEmployees() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testDeleteEmployeeById() {
+//		fail("Not yet implemented");
+//	}
+
+	@Test
+	void testFindByEmail() throws EmployeeNotFoundException {
+		Employee employee = employeeService.findByEmail("bharath@gmail.com");
+		assertEquals(42, employee.getEmployeeId());
+	}
+
+}

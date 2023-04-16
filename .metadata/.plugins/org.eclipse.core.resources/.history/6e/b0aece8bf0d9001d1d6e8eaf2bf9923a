@@ -1,0 +1,38 @@
+package com.hdfc.olms.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.hdfc.olms.entity.Employee;
+
+@Service
+public class EmployeeServiceImpl {
+	
+	@Autowired
+	RestTemplate restTemplate;
+	
+	String baseUrl = "http://localhost:700/api/admin/employees"
+	
+	public String getUser() {
+	String currentUserName= null;
+	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	if (!(authentication instanceof AnonymousAuthenticationToken)) {
+	     currentUserName = authentication.getName();
+		}
+	return currentUserName;
+	}
+	
+	public Employee getMyDetails() {
+		restTemplate.getForEntity(null, null)
+	}
+	
+	public String getUsername() {
+		return getUser();
+	}
+	
+
+}

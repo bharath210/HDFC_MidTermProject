@@ -1,0 +1,25 @@
+package com.hdfc.olms.service;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeServiceImpl {
+	
+	@Autowired
+	private Authentication authentication;
+	
+	Object principal = authentication.getPrincipal();
+	
+	if (principal instanceof UserDetails) {
+		UserDetails userDetails = (UserDetails) principal;
+		String username = userDetails.getUsername();
+		Collection<? extends GrantedAuthority> authorities = userDetails.getAuthorities();
+	}
+
+}

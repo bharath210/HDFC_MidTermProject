@@ -1,0 +1,16 @@
+package com.hdfc.olms.service;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+
+import com.hdfc.olms.entity.LeaveRequest;
+import com.hdfc.olms.vo.LeaveRequestVO;
+
+public interface ILeaveRequestService {
+	public LeaveRequestVO applyForLeave(LeaveRequest leaveRequest);
+	public LeaveRequestVO modifyLeave(LeaveRequest leaveRequest);
+	public ResponseEntity<?> getLeaveRequestStatus(long leaveRequestId);
+	public List<LeaveRequestVO> getCurrentUserPendingLeaves();
+	public List<LeaveRequestVO> getCurrentUserLeaveHistory();
+}

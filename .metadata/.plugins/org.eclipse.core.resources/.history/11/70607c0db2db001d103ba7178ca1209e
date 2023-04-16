@@ -1,0 +1,49 @@
+package com.hdfc.olms.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class LeaveRequestServiceImplTest {
+
+	@Test
+	void testApplyForLeave() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetPendingLeaveRquests() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveRequestById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testUpdateLeave() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveRequestByEmployeeId() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveHistroyAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetPendingLeaveRquestsByEmployee() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDeleteLeaveRequest() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,64 @@
+package com.hdfc.olms.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hdfc.olms.dto.LeaveRequestDTO;
+import com.hdfc.olms.exception.EmployeeNotFoundException;
+
+@SpringBootTest
+class LeaveRequestServiceImplTest {
+	
+	@Autowired
+	ILeaveRequestService leaveRequestService;
+	
+	@Autowired
+	IEmployeeService employeeService;
+
+	@Test
+	void testApplyForLeave() throws EmployeeNotFoundException {
+		LeaveRequestDTO leaveRequest = new LeaveRequestDTO();
+
+		leaveRequest.setEmployee(employeeService.getEmployeeById(42));
+		leaveRequest.setStartDate(null);
+	}
+
+	@Test
+	void testGetPendingLeaveRquests() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveRequestById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testUpdateLeave() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveRequestByEmployeeId() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveHistroyAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetPendingLeaveRquestsByEmployee() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testDeleteLeaveRequest() {
+		fail("Not yet implemented");
+	}
+
+}

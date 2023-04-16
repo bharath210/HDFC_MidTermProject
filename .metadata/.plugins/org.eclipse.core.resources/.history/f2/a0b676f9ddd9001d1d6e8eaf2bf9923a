@@ -1,0 +1,21 @@
+package com.hdfc.olms.entity;
+
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.hdfc.olms.utils.enums.LeaveType;
+
+public class LeaveBalance {
+
+	private long leaveBalanceId;
+	private Employee employee;
+	private LeaveType leaveType;
+	private long balance;
+
+
+}

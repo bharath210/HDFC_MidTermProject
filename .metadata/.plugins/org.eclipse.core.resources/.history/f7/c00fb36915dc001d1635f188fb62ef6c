@@ -1,0 +1,39 @@
+package com.hdfc.olms.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class LeaveBalanceServiceImplTest {
+
+	@Test
+	void testAddLeaveBalance() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testUpdateBalance() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveBalanceById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetEmployeeLeaveBalances() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetLeaveBalanceByEmployeeAndLeaveType() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetAllLeaveBalances() {
+		fail("Not yet implemented");
+	}
+
+}
