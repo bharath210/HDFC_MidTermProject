@@ -6,7 +6,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
+/**
+ *@author Bharath Kumar
+ *@created 12-Apr-2023
+*
+ */
 @EnableWebSecurity
 public class Config extends WebSecurityConfigurerAdapter {
   
@@ -14,17 +18,15 @@ public class Config extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-                .withUser("bharath@gmail.com")
-                .password("bharath")
-                .roles("USER")
-                .and()
-                .withUser("praveen@gmail.com")
-                .password("praveen")
-                .roles("USER")
-                .and()
-                .withUser("naveen@gmail.com")
-                .password("naveen")
-                .roles("USER");
+                .withUser("bharath@gmail.com").password("bharath").roles("USER").and()
+                .withUser("praveen@gmail.com").password("praveen").roles("USER").and()
+                .withUser("naveen@gmail.com").password("naveen").roles("USER").and()
+                .withUser("ajay@gmail.com").password("ajay").roles("USER").and()
+                .withUser("venkat@gmail.com").password("venkat").roles("USER").and()
+                .withUser("sai@gmail.com").password("sai").roles("USER").and()
+                .withUser("hasini@gmail.com").password("hasini").roles("USER").and()
+                .withUser("vijay@gmail.com").password("vijay").roles("USER").and()
+                .withUser("swathi@gmail.com").password("swathi").roles("USER");
     }
     
     @Override

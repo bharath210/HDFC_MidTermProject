@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=OfficeLeaveManagementSystem/C:\/Users\/gnave\/.gradle\/caches\/modules-2\/files-2.1\/org.springframework.data\/spring-data-jpa\/2.7.10\/dfb83414eb6a8609bd71dc3ddae82e973698a091\/spring-data-jpa-2.7.10.jar=/gradle_used_by_scope=/=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1679899754587"/>
-    <typeInfo handle="=OfficeLeaveManagementSystem/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.hdfc.olms.service{IEmployeeService.java[IEmployeeService" modifiers="513" timestamp="1681545029411"/>
+    <typeInfo handle="=OfficeLeaveManagementSystem/C:\/Users\/gnave\/.gradle\/caches\/modules-2\/files-2.1\/org.springframework.data\/spring-data-jpa\/2.7.10\/dfb83414eb6a8609bd71dc3ddae82e973698a091\/spring-data-jpa-2.7.10.jar=/gradle_used_by_scope=/main,test=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1679899754587"/>
 </typeInfoHistroy>

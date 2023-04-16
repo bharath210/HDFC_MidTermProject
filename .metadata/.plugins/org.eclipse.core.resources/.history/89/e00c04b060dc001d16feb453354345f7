@@ -1,0 +1,3 @@
+systemProp.sonar.host.url=http://localhost:9000
+
+systemProp.sonar.login=df00c9aeb37be4b0d1939e08b5a0630c2ee8fe87

@@ -1,5 +1,6 @@
 package com.hdfc.olms.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,13 @@ import org.springframework.web.client.RestTemplate;
 
 import com.hdfc.olms.entity.Employee;
 import com.hdfc.olms.entity.LeaveRequest;
+import com.hdfc.olms.utils.enums.LeaveType;
 import com.hdfc.olms.vo.LeaveRequestVO;
-
+/**
+ *@author Bharath Kumar
+ *@created 13-Apr-2023
+*
+ */
 @Service
 public class LeaveRequestServiceImpl implements ILeaveRequestService{
 		
@@ -29,9 +35,15 @@ public class LeaveRequestServiceImpl implements ILeaveRequestService{
 	String baseUrl = "http://localhost:7000/api/admin/leave-request";
 
 	@Override
-	public LeaveRequestVO applyForLeave(LeaveRequest leaveRequest) {
+	public LeaveRequestVO applyForLeave(String startDate, String endDate, LeaveType leaveType, String reason) {
+		LeaveRequest leaveRequest = new LeaveRequest();
 		 leaveRequest.setEmployee(getEmployee());
+		 leaveRequest.setStartDate(LocalDate.parse(startDate));
+		 leaveRequest.setEndDate(LocalDate.parse(endDate));
+		 leaveRequest.setLeaveType(leaveType);
+		 leaveRequest.setReason(reason);
 		 
+
 //		restTemplate.getInterceptors().add(new BasicAuthorizationInterceptor("admin", "admin"));
 //		HttpHeaders headers = new HttpHeaders();
 //		headers.setContentType(MediaType.APPLICATION_JSON);
