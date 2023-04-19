@@ -1,0 +1,52 @@
+package com.hdfc.olms.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.hdfc.olms.entity.LeaveRequest;
+import com.hdfc.olms.utils.enums.LeaveType;
+import com.hdfc.olms.vo.LeaveRequestVO;
+
+@SpringBootTest
+class LeaveRequestServiceImplTest {
+	
+	@Autowired
+	ILeaveRequestService service;
+//
+//	@Test
+//	void testGetEmployee(){
+//	fail("Not yet implemented");
+//	}
+
+	@Test
+	void testApplyForLeave(){
+	LeaveRequestVO lr = service.applyForLeave("2023-04-17", "2023-04-18", LeaveType.ANUAL_LEAVE , "Going to vacation");
+	assertNotNull(lr);
+	}
+
+//	@Test
+//	void testModifyLeave(){
+//	fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testGetLeaveRequestStatus(){
+//	fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testGetCurrentUserPendingLeaves(){
+//	fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	void testGetCurrentUserLeaveHistory(){
+//	fail("Not yet implemented");
+//	}
+//@author
+//@created
+//@project
+}

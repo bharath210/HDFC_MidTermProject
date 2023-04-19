@@ -45,19 +45,19 @@
     <fullyQualifiedTypeName name="com.hdfc.olms.utils.JasperReportUtil"/>
     <fullyQualifiedTypeName name="com.hdfc.olms.exception.EmployeeNotFoundException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="com.hdfc.olms.service.IEmployeeService"/>
     <fullyQualifiedTypeName name="com.hdfc.olms.entity.Employee"/>
-    <fullyQualifiedTypeName name="com.hdfc.olms.service.ILeaveRequestService"/>
     <fullyQualifiedTypeName name="com.hdfc.olms.dto.LeaveRequestDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.hdfc.olms.service.ILeaveBalanceService"/>
     <fullyQualifiedTypeName name="com.hdfc.olms.dto.LeaveBalanceDTO"/>
     <fullyQualifiedTypeName name="com.hdfc.olms.entity.LeaveBalance"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
-    <fullyQualifiedTypeName name="com.hdfc.olms.entity.LeaveRequest"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="com.hdfc.olms.utils.enums.LeaveType"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.hdfc.olms.service.IEmployeeService"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.test.context.SpringBootTest"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.hdfc.olms.service.ILeaveRequestService"/>
+    <fullyQualifiedTypeName name="com.hdfc.olms.utils.enums.LeaveType"/>
+    <fullyQualifiedTypeName name="com.hdfc.olms.entity.LeaveRequest"/>
 </qualifiedTypeNameHistroy>
